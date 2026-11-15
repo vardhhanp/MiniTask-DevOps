@@ -26,7 +26,8 @@ jobs:
           pip install -r requirements-dev.txt
 
       - name: Run tests
-        run: pytest
+        run:
+          python -m pytest
 
       - name: Build Docker image
         run: docker build -t minitask:ci .
